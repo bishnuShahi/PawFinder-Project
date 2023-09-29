@@ -1,0 +1,264 @@
+html{
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+  width: 0px;
+}
+
+#home{
+    height: 80vh;
+    background-image: url('../images/cat2.jpg');
+    background-position: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    position: relative;
+}
+
+#service{
+    background-color: rgb(11, 26, 12);
+    height: 100vh;
+    width: 80vw;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.img{
+    margin-top: 50px;
+    height: 80%;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+  
+}
+
+.img p{
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.img h3{
+    font-size: 23px;
+    font-weight: bolder;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.img img{
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.img:hover img {
+    transform: scale(1.1);
+  }
+
+.img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.img:hover::before {
+    opacity: 1;
+  }
+  
+.img h3, .img p, .img button {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+
+.data{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 9.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 80vh;
+    backdrop-filter: blur(1px);
+    
+}
+
+.data h1{
+    margin: 0;
+    margin-bottom: 20px;
+    width: 45%;
+    text-align: center;
+    font-size: 50px;
+
+}
+
+.data p{
+    width: 52%;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 100;
+}
+
+button{
+    height: 35px;
+    background-color: rgb(100, 100, 180);
+    color: rgb(0, 0, 0);
+    border: 0;
+    border-radius: 5px;
+    padding: 0;
+    width: 120px;
+    cursor: pointer;
+}
+
+.explore-button{
+    cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.explore-button:hover {
+    background-color: #e59c15;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  } 
+
+.cool-button {
+    background-color: #d3ad70;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 5px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cool-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: left 0.3s ease;
+  }
+  
+  .cool-button:hover::before {
+    left: 0;
+  }
+  
+  .cool-button:hover {
+    background-color: #47506d;
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+nav {
+    background-color: #333;
+    text-align: center;
+    font-size: 20px;  
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+    
+  }
+  
+  nav ul li a {
+    
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    background-color: #555;
+  }
+ 
+  nav ul li a.active {
+    background-color: #fff;
+    color: #333;
+  }
+
+  nav ul li a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+  }
+  
+  nav ul li a:hover:after,
+  nav ul li a.active:after {
+    width: 100%;
+  }
+
+  nav ul li.right-corner {
+    margin-left: auto;
+  }
+  
+  nav ul li.right-corner a {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li.right-corner a:hover {
+    background-color: #555;
+  }
+  
+  section {
+    padding: 20px;
+  }
+  
+  section h2 {
+    text-align: center;
+  }
+
+html{
+    scroll-behavior: smooth;
+}
+
