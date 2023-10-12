@@ -151,9 +151,9 @@ class_to_num_cat = {'Abyssinian': 0,
  'Siamese': 10,
  'Sphynx': 11}
 
-InceptionV3 = InceptionV3(weights='Models/inception_v3_weights_tf_dim_ordering_tf_kernels_notop.h5', include_top=False)
-Xception = Xception(weights='Models/xception_weights_tf_dim_ordering_tf_kernels_notop.h5', include_top=False)
-InceptionResNetV2 = InceptionResNetV2(weights='Models/inception.h5', include_top=False)
+InceptionV3 = InceptionV3(weights='imagenet', include_top=False)
+Xception = Xception(weights='imagenet5', include_top=False)
+InceptionResNetV2 = InceptionResNetV2(weights='imagenet', include_top=False)
 
 
 def get_features(model, data_preprocessor, input_size, data):
