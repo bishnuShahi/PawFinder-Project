@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cat vs Dog</title>
+    <link rel="stylesheet" href="{% static 'css/main_style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="f-line">
+            <h1 style="font-family: 'Oswald', sans-serif; font-size: 40px;">Get</h1>
+            <h1 style="margin-top: 5px; font-family: 'Nunito Sans', sans-serif; font-size: 50px; text-decoration: line-through;">Accurate</h1>
+        </div>
+        
+        <h1 style="font-family: 'Poppins', sans-serif;" class="and">&</h1>
+        <div class="l-line">
+            <h1 style="font-family: 'Josefin Sans', sans-serif; font-size: 50px;" class="fast">Fast</h1>
+            <h1 style="margin-bottom: 7px; font-family: 'Cormorant', serif; font-size: 50px;" class="prediction">Predictions</h1>
+        </div>
+
+        <form method="post" action="main" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="image" class="file-input fa-solid fa-circle-plus" style="color: #6881ac;">
+            <button type="submit" class="button">Predict</button>
+        </form>
+        
+        {% if pred == 0 %}
+            <h2 class="prediction-result">Congratulation!! It's a CAT</h2>
+        {% elif pred == 1 %}
+            <h2 class="prediction-result" >Congratulation!! It's a DOG</h2>
+        {% endif %}
+    </div>
+
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+     </div>
+</body>
+</html>
