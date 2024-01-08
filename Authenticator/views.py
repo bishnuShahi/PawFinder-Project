@@ -152,7 +152,7 @@ class_to_num_cat = {'Abyssinian': 0,
  'Sphynx': 11}
 
 InceptionV3 = InceptionV3(weights='imagenet', include_top=False)
-Xception = Xception(weights='imagenet5', include_top=False)
+Xception = Xception(weights='imagenet', include_top=False)
 InceptionResNetV2 = InceptionResNetV2(weights='imagenet', include_top=False)
 
 
